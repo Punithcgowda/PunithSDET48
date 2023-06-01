@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="Test_NG_Script.HR_Head_05TC">
+        <methods>
+          <include name="Cofig_AM"/>
+          <include name="Config_T1"/>
+          <include name="Config_T2"/>
+          <include name="Config_T3"/>
+          <include name="Cofig_BC"/>
+          <include name="config_AC"/>
+          <include name="Config_BM"/>
+        </methods>
+      </class> <!-- Test_NG_Script.HR_Head_05TC -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
