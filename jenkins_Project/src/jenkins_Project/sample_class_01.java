@@ -1,10 +1,41 @@
 package jenkins_Project;
 
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class sample_class_01
 {
-public static void main(String[] args) 
+	
+public static void main(String[] args) throws Throwable
 {
-  System.out.println("Hiii im Jenkims");
-  //H36 12 * * * 36 12 * * * 36 12 * * * 
+  String BROWSER =System.getProperty("chrome");
+  String URL = System.getProperty("https://www.amazon.in");
+  
+  WebDriver driver;
+  if(BROWSER.equalsIgnoreCase("chrome"))
+  {
+	  driver=WebDriverManager.chromedriver().create();
+	 // driver =new ChromeDriver();
+  }
+  else if(BROWSER.equalsIgnoreCase("firefox"))
+  {
+	  driver = new FirefoxDriver();
+  }
+  else
+  {
+	  driver = new EdgeDriver();
+  }
+   driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+   driver.manage().window().maximize();
+   driver.get(URL);
+   driver.quit();
 }
+
 }
+
