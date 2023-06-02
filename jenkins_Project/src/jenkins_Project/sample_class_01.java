@@ -14,8 +14,8 @@ public class sample_class_01
 	
 public static void main(String[] args) throws Throwable
 {
-  String BROWSER =System.getProperty("chrome");
-  String URL = System.getProperty("https://www.amazon.in");
+  String BROWSER =System.getProperty("browser");
+  String URL = System.getProperty("urlS");
   
   WebDriver driver;
   if(BROWSER.equalsIgnoreCase("chrome"))
